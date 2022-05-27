@@ -30,6 +30,8 @@ ul li {
   font-weight: 700;
   cursor: pointer;
   transition: 0.5s;
+  padding: 5px 20px;
+  border-radius: 10px;
 }
 
 ul:hover li {
@@ -40,4 +42,17 @@ ul:hover li {
 ul li:hover {
   color: #333;
   background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.75);
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  background: #f00;
+  z-index: -1;
 }
