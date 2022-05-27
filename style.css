@@ -12,6 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background: #333;
 }
 
 ul {
@@ -26,4 +27,17 @@ ul li {
   text-align: center;
   color: #333;
   font-size: 3em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+ul:hover li {
+  color: transparent;
+  -webkit-text-stroke: 1px #000;
+}
+
+ul li:hover {
+  color: #333;
+  background: #fff;
 }
