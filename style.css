@@ -55,4 +55,33 @@ ul li::before {
   height: 100vh;
   background: #f00;
   z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+ul li:hover::before {
+  content: attr(data-text);
+  opacity: 1;
+}
+
+ul li:nth-child(1)::before {
+  background: linear-gradient(
+    #ff9a33 0%,
+    #ff9a33 33%,
+    #fff 33%,
+    #fff 66%,
+    #138807 66%,
+    #138807 100%
+  );
+}
+ul li:nth-child(2)::before {
+  background: linear-gradient(
+    #005bbc 0%,
+    #005bbc 50%,
+    #ffd600 50%,
+    #ffd600 100%
+  );
 }
