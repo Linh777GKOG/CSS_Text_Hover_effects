@@ -12,7 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #333;
+  overflow: hidden;
 }
 
 ul {
@@ -60,11 +60,16 @@ ul li::before {
   align-items: center;
   opacity: 0;
   transition: 0.5s;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 18vw;
+  -webkit-text-stroke: 0px #000;
+  letter-spacing: 100px;
 }
 
 ul li:hover::before {
   content: attr(data-text);
   opacity: 1;
+  letter-spacing: 10px;
 }
 
 ul li:nth-child(1)::before {
@@ -83,5 +88,16 @@ ul li:nth-child(2)::before {
     #005bbc 50%,
     #ffd600 50%,
     #ffd600 100%
+  );
+}
+
+ul li:nth-child(3)::before {
+  background: linear-gradient(
+    #fff 0%,
+    #fff 33%,
+    #0039a6 33%,
+    #0039a6 66%,
+    #d52b1e 66%,
+    #d52b1e 100%
   );
 }
